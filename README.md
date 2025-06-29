@@ -1,1 +1,1 @@
-# tgbots-tgwatch
+# tgbots-observer

@@ -1,0 +1,13 @@
+version: '3'
+
+silent: true
+
+tasks:
+  build:
+    cmds:
+      - cmd: docker build -t tgbots-observer:local .
+  start:
+    deps:
+      - build
+    cmds:
+      - cmd: docker compose up

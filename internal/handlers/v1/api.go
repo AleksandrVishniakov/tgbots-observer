@@ -2,10 +2,12 @@ package v1
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"strconv"
 	"time"
 
+	"github.com/AleksandrVishniakov/tgbots-observer/pkg/dto"
 	"github.com/AleksandrVishniakov/tgbots-util/http/e"
 	"github.com/AleksandrVishniakov/tgbots-util/http/json"
 	"github.com/AleksandrVishniakov/tgbots-util/http/middlewares"
@@ -19,7 +21,7 @@ type Observer interface {
 		pollingInterval time.Duration,
 	) error
 
-	CloseObserver(id int64)
+	CloseObserver(id int64) bool
 }
 
 type API struct {
@@ -41,11 +43,6 @@ func (api *API) InitRoutes() http.Handler {
 	return mux
 }
 
-type StartObserveRequest struct {
-	Token           string `json:"token"`
-	PollingInterval time.Duration `json:"pollingInterval"`
-}
-
 func (api *API) StartObserve(w http.ResponseWriter, r *http.Request) error {
 	defer r.Body.Close()
 
@@ -54,7 +51,7 @@ func (api *API) StartObserve(w http.ResponseWriter, r *http.Request) error {
 		return e.BadRequest(e.WithError(err))
 	}
 
-	dto, err := json.Decode[StartObserveRequest](r.Body)
+	dto, err := json.Decode[dto.StartObserveRequest](r.Body)
 	if err != nil {
 		return e.BadRequest(e.WithError(err))
 	}
@@ -76,6 +73,11 @@ func (api *API) StopObserve(w http.ResponseWriter, r *http.Request) error {
 		return e.BadRequest(e.WithError(err))
 	}
 
-	api.observer.CloseObserver(int64(id))
+	ok := api.observer.CloseObserver(int64(id))
+	if !ok {
+		return e.NotFound(e.WithMessage(
+			fmt.Sprintf("observer with id %d not found", id),
+		))
+	}
 	return nil
 }

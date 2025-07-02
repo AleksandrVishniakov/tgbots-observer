@@ -58,7 +58,7 @@ func (app *App) Run(ctx context.Context) error {
 	}))
 	defer srv.Shutdown(ctx)
 
-	log.Info(fmt.Sprintf("server started on http://%s:%d", app.cfg.HTTP.Host, app.cfg.HTTP.Port))
+	log.Info(fmt.Sprintf("server started on %s:%d", app.cfg.HTTP.Host, app.cfg.HTTP.Port))
 
 	return srv.Run()
 }

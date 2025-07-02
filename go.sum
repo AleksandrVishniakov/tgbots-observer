@@ -1,7 +1,15 @@
 github.com/AleksandrVishniakov/tgbots-tgapi v0.0.2 h1:U99OyXB4hg/8fI7h+Cq6hzrSmjO8IMRUtc4EeXxrmVk=
 github.com/AleksandrVishniakov/tgbots-tgapi v0.0.2/go.mod h1:QYlnR8YKSzRkvzjgJHMVwyRKbsyN3JvZ5J3NPrPeV78=
+github.com/AleksandrVishniakov/tgbots-tgapi v0.0.3 h1:6BTCHg/3FbZ/kbU/bPeiS1ltubsLUUFO95Yvm97vSjg=
+github.com/AleksandrVishniakov/tgbots-tgapi v0.0.3/go.mod h1:QYlnR8YKSzRkvzjgJHMVwyRKbsyN3JvZ5J3NPrPeV78=
+github.com/AleksandrVishniakov/tgbots-tgapi v0.0.4 h1:4oXZhhA3kdglfqGKi0oabH0Ui154is7zUKQXeT8gAlk=
+github.com/AleksandrVishniakov/tgbots-tgapi v0.0.4/go.mod h1:QYlnR8YKSzRkvzjgJHMVwyRKbsyN3JvZ5J3NPrPeV78=
+github.com/AleksandrVishniakov/tgbots-tgapi v0.0.5 h1:j3GPubjq31wIOyN5Kk686MI/iAXaReJji9Aw9uHwuxE=
+github.com/AleksandrVishniakov/tgbots-tgapi v0.0.5/go.mod h1:QYlnR8YKSzRkvzjgJHMVwyRKbsyN3JvZ5J3NPrPeV78=
 github.com/AleksandrVishniakov/tgbots-util v1.0.4 h1:Q+L7O0A4ws1ywrkQ9dnyhorpmiHUKj8uHRAvc68AIII=
 github.com/AleksandrVishniakov/tgbots-util v1.0.4/go.mod h1:6EyA83kXiWXcuMYrgfw/t2KA8v4BEefmKw50VUaxUDI=
+github.com/AleksandrVishniakov/tgbots-util v1.0.5 h1:q0eztzSrMlTJmPDJFDS0iMb3U/zlpThAA2BAM9O7j7Y=
+github.com/AleksandrVishniakov/tgbots-util v1.0.5/go.mod h1:6EyA83kXiWXcuMYrgfw/t2KA8v4BEefmKw50VUaxUDI=
 github.com/BurntSushi/toml v1.2.1 h1:9F2/+DoOYIOksmaJFPw1tGFy1eDnIJXg+UHjuD8lTak=
 github.com/BurntSushi/toml v1.2.1/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=

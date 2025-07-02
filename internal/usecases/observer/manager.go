@@ -67,14 +67,17 @@ func (w *ObserversManager) Observe(
 	return nil
 }
 
-func (w *ObserversManager) CloseObserver(id int64) {
+func (w *ObserversManager) CloseObserver(id int64) bool {
 	w.mu.Lock()
-	defer w.mu.Lock()
+	defer w.mu.Unlock()
 
 	if observer, ok := w.observers[id]; ok {
 		observer.Close()
 		delete(w.observers, id)
+		return true
 	}
+
+	return false
 }
 
 func (w *ObserversManager) Close() {

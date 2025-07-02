@@ -3,8 +3,8 @@ module github.com/AleksandrVishniakov/tgbots-observer
 go 1.24.3
 
 require (
-	github.com/AleksandrVishniakov/tgbots-tgapi v0.0.2
-	github.com/AleksandrVishniakov/tgbots-util v1.0.4
+	github.com/AleksandrVishniakov/tgbots-tgapi v0.0.5
+	github.com/AleksandrVishniakov/tgbots-util v1.0.5
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	github.com/nats-io/nats.go v1.43.0
 )
